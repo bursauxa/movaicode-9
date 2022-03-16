@@ -1,0 +1,115 @@
+services:
+  movaicode:
+    image: nginx
+    volumes:
+    - ./movaicode.conf:/etc/nginx/nginx.conf
+    ports:
+    - "9900:80"
+  beugnot:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=beugnot
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  bottereaux:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=bottereaux
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  bougnettes:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=bougnettes
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  bugnes:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=bugnes
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  crouchepettes:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=crouchepettes
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  croustillons:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE='croustillons du ch\'nord'
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  ganses:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=ganses
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  gaufres:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=gaufres
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  merveilles:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=merveilles
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  oreillettes:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=oreillettes
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  pets:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE='pets de nonne'
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+  roussettes:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80"
+    environment:
+    - MARDI_RECETTE=roussettes
+    - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
